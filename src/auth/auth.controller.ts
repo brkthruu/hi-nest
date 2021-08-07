@@ -16,6 +16,6 @@ export class AuthController {
   @UseGuards(FortyTwoAuthGuard)
   @Get('42login')
   async login42(@Request() req) {
-    return 'success';
+    return JSON.stringify(req.user);
   }
 }
